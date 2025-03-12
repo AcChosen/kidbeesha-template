@@ -1,3 +1,4 @@
+
 // 1. Create the scene, camera, and renderer
 const scene = new THREE.Scene();
 const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
@@ -20,7 +21,7 @@ void main() {
 `;
 
 // 4. Load the GLSL shader from an external file
-fetch("shader.frag")
+fetch("shaders/frag.glsl")
   .then(response => response.text())
   .then(fragmentShader => {
     // 5. Create a ShaderMaterial with the loaded GLSL
